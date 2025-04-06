@@ -1,0 +1,212 @@
+/* styles.css */
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.hero {
+  height: 100vh;
+  background: #0a0a0a; /* your black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #00D1D1; /* Teal */
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #00D1D1; /* Teal */
+  color: #0a0a0a;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00a0a0; /* Darker teal on hover */
+}
+
+.section {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00D1D1; /* Teal */
+}
+
+.project-card {
+  background: #121212;
+  padding: 1.5rem; /* smaller padding */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 242, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* fill the box but crop nicely */
+  background: #121212;
+  border-radius: 15px; /* slight rounding but not a pill anymore */
+  margin-bottom: 1rem;
+}
+
+.project-card img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.services-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.services-list li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Fade-in animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.3s;
+}
+
+.delay-2 {
+  transition-delay: 0.6s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a; /* fallback color */
+  top: 0;
+  left: 0;
+  z-index: -1; /* IMPORTANT: send particles behind everything */
+}
+
+/* arrows pointing down */
+.scroll-down {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #00D1D1;
+  text-align: center;
+  line-height: 0.8; /* tighten up arrows */
+}
+
+.scroll-down:hover span {
+  text-shadow: 0 0 10px #00D1D1, 0 0 20px #00D1D1, 0 0 30px #00D1D1;
+  transform: scale(1.2);
+  animation: bounce-hover 0.6s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+/* Keyframes for bounce */
+@keyframes bounce-hover {
+  0% {
+    transform: translateY(0) scale(1.2);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.2);
+  }
+}
+
+.scroll-down span {
+  display: block;
+  opacity: 0;
+  animation: flashArrow 1.5s infinite;
+}
+
+/* Different delays for each arrow */
+.scroll-down span:nth-child(1) {
+  animation-delay: 0s;
+}
+.scroll-down span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.scroll-down span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes for flashing */
+@keyframes flashArrow {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+

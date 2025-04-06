@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevHec Labs | Building Modern Websites</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container">
+        <h1 class="fade-in">DevHec Labs</h1>
+        <p class="fade-in delay-1">Building Modern, Impactful Websites</p>
+        <a href="#contact" class="btn fade-in delay-2">Work with Me</a>
+
+        <!-- Arrows stay inside container -->
+        <div class="scroll-down fade-in delay-3">
+          <span>⌄</span><br />
+          <span>⌄</span><br />
+          <span>⌄</span>
+        </div>
+      </div>
+    </header>
+
+    <div id="particles-js"></div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="fade-in">About Me</h2>
+        <p class="fade-in delay-1">
+          Hi, I'm Hector. I create clean, responsive websites that help
+          businesses grow online. Let's bring your vision to life.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2 class="fade-in">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card fade-in delay-1">
+            <img
+              src="images/MedicuraScreenshot.jpg"
+              alt="Medicura Integrative Institute Preview"
+            />
+            <h3>Medicura Integrative Institute</h3>
+            <p>
+              Responsive web design for a wellness center. Modern,
+              user-friendly, SEO-optimized.
+            </p>
+            <a
+              href="https://medicuraintegrativeinstitute.netlify.app/"
+              target="_blank"
+              class="btn"
+              >View Project</a
+            >
+          </div>
+
+          <!-- More project cards here -->
+          <!-- Copy and paste project-card divs when you get more work! -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="fade-in">Services</h2>
+        <ul class="services-list fade-in delay-1">
+          <li>Custom Website Development</li>
+          <li>Responsive Design</li>
+          <li>Website Maintenance & Updates</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="fade-in">Let's Connect</h2>
+        <p class="fade-in delay-1">
+          Interested in working together? Shoot me an email!
+        </p>
+        <a href="mailto:your-email@example.com" class="btn fade-in delay-2"
+          >Email Me</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 DevHec Labs. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-js", "particles.json", function () {
+        console.log("Particles loaded!");
+      });
+    </script>
+  </body>
+</html>
