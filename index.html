@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevHec Labs | Building Modern Websites</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts: Inter and Outfit -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="app.js"></script>
   </head>
   <body>
@@ -16,11 +21,50 @@
         <a href="#contact" class="btn fade-in delay-2">Work with Me</a>
 
         <!-- Arrows stay inside container -->
-        <div class="scroll-down fade-in delay-3">
-          <span>⌄</span><br />
-          <span>⌄</span><br />
-          <span>⌄</span>
-        </div>
+        <a href="#about" class="scroll-down fade-in delay-3">
+          <svg
+            class="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+          <svg
+            class="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+          <svg
+            class="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </a>
       </div>
     </header>
 
@@ -30,10 +74,13 @@
     <section id="about" class="section">
       <div class="container">
         <h2 class="fade-in">About Me</h2>
-        <p class="fade-in delay-1">
-          Hi, I'm Hector. I create clean, responsive websites that help
-          businesses grow online. Let's bring your vision to life.
-        </p>
+
+        <div class="about-text fade-in delay-1">
+          <p>
+            Hi, I'm Hector. I create clean, responsive websites that help
+            businesses grow online. Let's bring your vision to life.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -43,15 +90,17 @@
         <h2 class="fade-in">Projects</h2>
         <div class="projects-grid">
           <div class="project-card fade-in delay-1">
-            <img
-              src="images/MedicuraScreenshot.jpg"
-              alt="Medicura Integrative Institute Preview"
-            />
+            <a
+              href="https://medicuraintegrativeinstitute.netlify.app/"
+              target="_blank"
+            >
+              <img
+                src="images/MedicuraScreenshot.jpg"
+                alt="Medicura Integrative Institute Preview"
+              />
+            </a>
             <h3>Medicura Integrative Institute</h3>
-            <p>
-              Responsive web design for a wellness center. Modern,
-              user-friendly, SEO-optimized.
-            </p>
+            <p>Responsive web design for a wellness center...</p>
             <a
               href="https://medicuraintegrativeinstitute.netlify.app/"
               target="_blank"

@@ -8,10 +8,14 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a0a0a;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212; /* dark gray, not black */
   color: #f0f0f0;
   line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -22,31 +26,47 @@ body {
 }
 
 .hero {
-  height: 100vh;
-  background: #0a0a0a; /* your black background */
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(18,18,18,0.92), rgba(26,26,46,0.92), rgba(40,49,73,0.92), rgba(18,18,18,0.92));
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   flex-direction: column;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* ✨ ADD THIS ✨ */
+  padding: 0 2rem; /* ✨ optional: helps small screens */
 }
+
 
 .hero h1 {
   font-size: 4rem;
-  color: #00D1D1; /* Teal */
+  font-weight: 700;
+  background: linear-gradient(90deg, #6366F1, #7C83FD, #6366F1);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 10s linear infinite;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px rgba(99, 102, 241, 0.4);
 }
+
 
 .hero p {
   margin-top: 1rem;
   font-size: 1.5rem;
   color: #ccc;
+  margin-bottom: 2rem;
 }
 
 .btn {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.8rem 2rem;
-  background: #00D1D1; /* Teal */
+  background:  #6366F1; 
   color: #0a0a0a;
   border: none;
   border-radius: 30px;
@@ -56,7 +76,10 @@ body {
 }
 
 .btn:hover {
-  background: #00a0a0; /* Darker teal on hover */
+  background: #4F46E5; /* Darker Indigo */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.2);
+  transition: all 0.3s ease;
 }
 
 .section {
@@ -67,7 +90,7 @@ body {
 .section h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #00D1D1; /* Teal */
+  color: #6366F1; /* Soft Indigo */
 }
 
 .project-card {
@@ -153,22 +176,37 @@ body {
   top: 0;
   left: 0;
   z-index: -1; /* IMPORTANT: send particles behind everything */
+  opacity: 0.3;
 }
 
 /* arrows pointing down */
 .scroll-down {
   margin-top: 1.5rem;
-  font-size: 2.5rem;
-  color: #00D1D1;
-  text-align: center;
-  line-height: 0.8; /* tighten up arrows */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6366F1; /* Match your modern blue */
+  text-decoration: none;
+  gap: 0.5rem; /* space between arrows */
+}
+
+.scroll-down .arrow {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  animation: flashArrow 1.5s infinite;
 }
 
 .scroll-down:hover span {
-  text-shadow: 0 0 10px #00D1D1, 0 0 20px #00D1D1, 0 0 30px #00D1D1;
+  text-shadow: 0 0 6px #6366F1, 0 0 12px #6366F1;
   transform: scale(1.2);
-  animation: bounce-hover 0.6s infinite alternate;
   transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.scroll-down:hover .arrow {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
 
 /* Keyframes for bounce */
@@ -187,14 +225,15 @@ body {
   animation: flashArrow 1.5s infinite;
 }
 
+
 /* Different delays for each arrow */
-.scroll-down span:nth-child(1) {
+.scroll-down .arrow:nth-child(1) {
   animation-delay: 0s;
 }
-.scroll-down span:nth-child(2) {
+.scroll-down .arrow:nth-child(2) {
   animation-delay: 0.3s;
 }
-.scroll-down span:nth-child(3) {
+.scroll-down .arrow:nth-child(3) {
   animation-delay: 0.6s;
 }
 
@@ -202,11 +241,57 @@ body {
 @keyframes flashArrow {
   0%, 100% {
     opacity: 0;
+    transform: translateY(0);
   }
   50% {
     opacity: 1;
+    transform: translateY(5px);
   }
 }
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.about-text {
+  max-width: 600px; /* Controls how wide it is */
+  margin: 0 auto;   /* Centers it horizontally */
+  padding: 1rem 2rem; /* Adds some breathing room inside */
+  background: rgba(255, 255, 255, 0.03); /* Soft subtle box */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15); /* Very soft indigo shadow */
+}
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc; /* Slightly softer text color */
+}
+/* 
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+} */
+
+/* @keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 4px #6366F1, 0 0 8px #7C83FD;
+  }
+  50% {
+    text-shadow: 0 0 8px #7C83FD, 0 0 12px #A5B4FC;
+  }
+} */
 
 
 
