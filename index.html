@@ -4,60 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevHec Labs | Building Modern Websites</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap"
       rel="stylesheet"
     />
-    <script defer src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script defer src="hero.js"></script>
   </head>
   <body>
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <header class="hero">
+      <canvas id="orbitCanvas"></canvas>
       <div class="container">
-        <h1 class="fade-in">DevHec Labs</h1>
-        <p class="fade-in delay-1">Building Modern, Impactful Websites</p>
+        <h1 class="hero-title">
+          <span id="typed-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="hero-subtitle fade-in delay-1">
+          Building Modern, Impactful Websites
+        </p>
         <a href="#contact" class="btn fade-in delay-2">Work with Me</a>
-
-        <!-- Arrows stay inside container -->
-        <a href="#about" class="scroll-down fade-in delay-3">
-          <svg
-            class="arrow"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-          <svg
-            class="arrow"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-          <svg
-            class="arrow"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -69,26 +36,25 @@
       </div>
     </header>
 
-    <div id="particles-js"></div>
-
-    <!-- About Section -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
       <div class="container">
         <h2 class="fade-in">About Me</h2>
-
         <div class="about-text fade-in delay-1">
           <p>
-            Hi, I'm Hector. I create clean, responsive websites that help
-            businesses grow online. Let's bring your vision to life.
+            I’m Hector, a web developer passionate about building fast,
+            responsive, and visually engaging websites. I help businesses stand
+            out online with clean code, bold design, and intuitive experiences
+            across all devices.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- PROJECTS SECTION -->
     <section id="portfolio" class="section">
       <div class="container">
-        <h2 class="fade-in">Projects</h2>
+        <h2 class="fade-in">Recent Work</h2>
         <div class="projects-grid">
           <div class="project-card fade-in delay-1">
             <a
@@ -97,11 +63,14 @@
             >
               <img
                 src="images/MedicuraScreenshot.jpg"
-                alt="Medicura Integrative Institute Preview"
+                alt="Medicura Website Screenshot"
               />
             </a>
             <h3>Medicura Integrative Institute</h3>
-            <p>Responsive web design for a wellness center...</p>
+            <p>
+              Wellness website designed with mobile-first layout and dynamic
+              components.
+            </p>
             <a
               href="https://medicuraintegrativeinstitute.netlify.app/"
               target="_blank"
@@ -109,49 +78,41 @@
               >View Project</a
             >
           </div>
-
-          <!-- More project cards here -->
-          <!-- Copy and paste project-card divs when you get more work! -->
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="section">
       <div class="container">
         <h2 class="fade-in">Services</h2>
         <ul class="services-list fade-in delay-1">
           <li>Custom Website Development</li>
           <li>Responsive Design</li>
-          <li>Website Maintenance & Updates</li>
+          <li>Landing Page Optimization</li>
+          <li>Website Maintenance</li>
         </ul>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="fade-in">Let's Connect</h2>
+        <h2 class="fade-in">Let’s Work Together</h2>
         <p class="fade-in delay-1">
-          Interested in working together? Shoot me an email!
+          Ready to build something great? Let’s get in touch!
         </p>
-        <a href="mailto:devheclabs@gmail.com" class="btn fade-in delay-2"
+        <a href="mailto:your.email@example.com" class="btn fade-in delay-2"
           >Email Me</a
         >
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <p>&copy; 2025 DevHec Labs. All rights reserved.</p>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS.load("particles-js", "particles.json", function () {
-        console.log("Particles loaded!");
-      });
-    </script>
   </body>
 </html>
