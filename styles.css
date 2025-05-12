@@ -172,6 +172,20 @@ html {
   transform: translateY(0);
 }
 
+.footer-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #121212;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #6366F1;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
